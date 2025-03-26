@@ -9,12 +9,14 @@
   --main-heading-color: #000028;
   --section-heading-color: #FF0070;
   --nav-color: #FF0070;
+  --outline-color-hover: rgba(255, 113, 102, .4);
   --header-logo-color: #DB00FF;
   --footer-logo-color: #DB00FF;
   --bg-image: url(../images/cover-image-dark.png);
   --main-font-family: 'IBM Plex mono', monospace;
   --main-text-size: 18px;
-  --main-line-height: 25px;
-  --font-size-logo: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --header-padding: 10px;
+  --main-line-height: 23.4px;
+  --font-size-logo: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);/*Заменять для десктопов и планшетов @media (clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) )*/
+  --header-padding: clamp(10px, 2.66vw ,20px);
+  --content-padding: clamp(40px, 10.66vw ,60px);
 }
