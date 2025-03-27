@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--nav-color);
+  color: var(--accent-color);
   text-transform: uppercase;
   inset-inline-end: calc(var(--header-padding) + 9px);
   inset-block-start: calc(var(--header-padding) + 2px); 
@@ -52,8 +52,8 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background: var(--nav-color);
-  filter: drop-shadow(0 0 4px var(--nav-color));
+  background: var(--accent-color);
+  filter: drop-shadow(0 0 4px var(--accent-color));
 }
 
 .header__theme-menu-list {
@@ -100,7 +100,7 @@ button.disabled {
 }
 
 .title-decor {/*фон для загловков*/
-  background-color: var(--section-heading-color);
+  background-color: var(--accent-color);
   color: var(--main-heading-color);
 }
 
