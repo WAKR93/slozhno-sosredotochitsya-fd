@@ -25,6 +25,21 @@
   display: none;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+@media (prefers-color-scheme: light){
+  :root {
+    --accent-color: #ff8dcb;
+    --main-bg-color: #fff1f7;
+    --main-text-color: #353430;
+    --main-heading-color: #353430;
+    --section-heading-color: #353430;
+    --nav-color: #353430;
+    --outline-color-hover: rgba(50, 49, 45, .4);
+    --header-logo-color: #ffc2e6;
+    --footer-logo-color: #ffc2e6;
+    --bg-image: url(../images/cover-image-light.png);
+  }
+  
+  .rec {
+    display: none;
+  }
 }
