@@ -39,7 +39,7 @@
     --bg-image: url(../images/cover-image-light.png);
   }
   
-  .rec {
+  .theme-auto .rec {
     display: none;
   }
 }

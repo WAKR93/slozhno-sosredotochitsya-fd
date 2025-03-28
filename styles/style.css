@@ -2,6 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  min-block-size: 688px;
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -15,18 +16,18 @@
   justify-items: end;
   align-items: center;    
   min-block-size: 100vh;  
-  padding: var(--header-padding);
+  padding: var(--header-padding, 10px);
 }
 
 .decorated-zone::before {
   position: absolute;
   content: '';
-  border-top: 1px solid var(--nav-color);
-  border-right: 1px solid var(--nav-color);
+  border-top: 1px solid var(--nav-color, #FF0070);
+  border-right: 1px solid var(--nav-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-end: var(--header-padding);
-  inset-block-start: var(--header-padding);
+  inset-inline-end: var(--header-padding, 10px);
+  inset-block-start: var(--header-padding, 10px);
 }
 
 .rec {
@@ -34,10 +35,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--accent-color);
+  color: var(--accent-color, #FF0070);
   text-transform: uppercase;
-  inset-inline-end: calc(var(--header-padding) + 9px);
-  inset-block-start: calc(var(--header-padding) + 2px); 
+  inset-inline-end: calc(var(--header-padding, 10px) + 9px);
+  inset-block-start: calc(var(--header-padding, 10px) + 2px); 
 }
 
 .rec::after {
@@ -46,24 +47,21 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background: var(--accent-color);
-  filter: drop-shadow(0 0 4px var(--accent-color));
+  background: var(--accent-color, #FF0070);
+  filter: drop-shadow(0 0 4px var(--accent-color, #FF0070));
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 13px;
 }
 
 .header__theme-menu-button {
   padding: 3.5px 13px;
   border-style: none;
-  font-family: inherit;
-  font-weight: inherit;
-  font-family: inherit;
   line-height: 16px;
-  color: var(--nav-color);
+  color: var(--nav-color, #FF0070);
   background-color: transparent;
   text-transform: lowercase;
 }
@@ -82,48 +80,47 @@ button.disabled {
 }
 
 .heading {/*общий стиль для LOGO h1*/
-  font-size: var(--font-size-logo);
+  font-size: var(--font-size-logo, 118px);
   font-weight: bold;
-  color: var(--header-logo-color);
+  color: var(--header-logo-color, #DB00FF);
   line-height: 83%;
 }
 
 .header__logo {/*тень для header logo*/
   justify-self: start;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
 
 .title-decor {/*фон для загловков*/
-  background-color: var(--accent-color);
-  color: var(--main-heading-color);
+  background-color: var(--accent-color, #FF0070);
+  color: var(--main-heading-color, #000028);
 }
 
 .decorated-zone::after {
   position: absolute;
   content: '';
-  border-bottom: 1px solid var(--nav-color);
-  border-left: 1px solid var(--nav-color);
+  border-bottom: 1px solid var(--nav-color, #FF0070);
+  border-left: 1px solid var(--nav-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-start: var(--header-padding);
-  inset-block-end: var(--header-padding);
+  inset-inline-start: var(--header-padding, 10px);
+  inset-block-end: var(--header-padding, 10px);
 }
 /*--------------------------------------------main---------------------------------------------------*/
 .content {
-  padding-inline: var(--header-padding);
-  padding-block: var(--content-padding);
-  background-color: var(--main-bg-color);
+  padding-inline: var(--header-padding, 10px);
+  padding-block: var(--content-padding, 40px);
 }
 
 .content-section__title {/*стили заголовков h2*/
   padding-block-end: 20px;
   font-weight: bold;
   font-size: inherit;
-  color: var(--section-heading-color);
+  color: var(--section-heading-color, #FF0070);
 }
 
 .content-section:not(:last-child) {
-  padding-block-end: var(--section-padding);
+  padding-block-end: var(--section-padding, 50);
 }
 
 .text-block:not(:last-child) {
@@ -141,18 +138,18 @@ button.disabled {
 
 .text-block__paragraf {
   padding-block-start: 9px;
-  color: var(--main-text-color);
+  color: var(--main-text-color, #F1B2CE);
 }
 
 .text-block__paragraf a {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
 
 /*------------------------Блок с изо.--------------------------*/
 .grid-images {
   display: grid;
-  gap: var(--header-padding);
+  gap: var(--header-padding, 10px);
   grid-template-columns: 100%;
 }
 
@@ -164,10 +161,9 @@ button.disabled {
 /*-------------------------------------------footer--------------------------------------------------*/
 .footer {
   display: grid;
-  padding: var(--header-padding);
+  padding: var(--header-padding, 10px);
   position: relative;      
   min-block-size: 100vh; 
-  background-color: var(--main-bg-color);
 }
 
 .footer__logo {
@@ -178,7 +174,7 @@ button.disabled {
 /*------------------------------------------@media---------------------------------------------------*/
 @media (width >= 768px) {
   .header__theme-menu-button:hover {
-    outline: 1px solid var(--outline-color-hover);
+    outline: 1px solid var(--outline-color-hover, rgba(255, 113, 102, .4));
   }
   
   .header__theme-menu-button:focus-visible { 
@@ -197,7 +193,7 @@ button.disabled {
 
   .header__logo {
     position: relative;
-    inset-inline-start: calc(-1 * var(--header-padding));
+    inset-inline-start: calc(-1 * var(--header-padding, 10px));
     grid-column: 1/3;
   }
 
