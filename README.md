@@ -1,1 +1,1 @@
-git@github.com:yandex-praktikum/slozhno-sosredotochitsya-fd.git
+https://github.com/WAKR93/slozhno-sosredotochitsya-fd.git
