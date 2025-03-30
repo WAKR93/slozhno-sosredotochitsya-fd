@@ -24,15 +24,6 @@
   padding: var(--header-padding, 10px);
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--outline-color-hover, rgba(255, 113, 102, .4));
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2.5px;
-}
-
 .decorated-zone::before {
   position: absolute;
   content: '';
@@ -89,8 +80,17 @@ button.disabled {
   pointer-events: none;
 }
 
-:focus {
+.header__theme-menu-button:focus {
   outline: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--outline-color-hover, rgba(255, 113, 102, .4));
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2.5px;
 }
 
 .heading {/*общий стиль для LOGO h1*/
@@ -146,8 +146,22 @@ button.disabled {
   font-size: inherit;
 }
 
-.title-normal {
+.text-block__normal h4 {
   font-weight: normal;
+}
+
+.text-block__paragraf {
+  padding-block-start: 10px;
+  color: var(--main-text-color, #F1B2CE);
+}
+
+.text-block__paragraf a {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+}
+
+.text-block__paragraf a:focus {
+  outline: none;
 }
 
 .text-block__paragraf a:hover {
@@ -156,16 +170,6 @@ button.disabled {
 
 .text-block__paragraf a:focus-visible {
   outline: 1px solid currentColor;
-}
-
-.text-block__paragraf {
-  padding-block-start: 9px;
-  color: var(--main-text-color, #F1B2CE);
-}
-
-.text-block__paragraf a {
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
 
 /*------------------------Блок с изо.--------------------------*/
@@ -220,12 +224,8 @@ button.disabled {
 
   .content-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .content-section__title{
-    padding: 0;
+    grid-template-columns: 236px 1fr;
+    column-gap: 20px;
   }
 
   .questions .text-blocks {
@@ -239,6 +239,10 @@ button.disabled {
 
   .advices .text-blocks{
     grid-column: 2/4;
+  }
+
+  .grid-images {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .grid-images .title {
@@ -277,6 +281,10 @@ button.disabled {
   
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .content-section {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .reasons .text-blocks {
