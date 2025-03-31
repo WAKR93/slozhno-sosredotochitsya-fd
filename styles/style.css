@@ -63,8 +63,9 @@
 }
 
 .header__theme-menu-button {
-  padding: 3.5px 13px;
   border-style: none;
+  border: 1px solid transparent;
+  padding: 3.5px 13px;
   line-height: 16px;
   color: var(--nav-color, #ff0070);
   background-color: transparent;
@@ -73,7 +74,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid currentColor;
+  border-color: currentColor;
 }
 
 button.disabled {
@@ -85,12 +86,11 @@ button.disabled {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--outline-color-hover, rgba(255, 113, 102, 0.4));
+  border-color: var(--outline-color-hover);
 }
 
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid currentColor;
-  padding-bottom: 2.5px;
 }
 
 .heading {
@@ -201,7 +201,7 @@ button.disabled {
 .footer__logo {
   justify-self: center;
   align-self: center;
-  text-shadow: 3px 2px 0px var(--accent-color, #ff0070);
+  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
 }
 /*------------------------------------------@media---------------------------------------------------*/
 @media (width >= 768px) {
